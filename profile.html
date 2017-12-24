@@ -74,7 +74,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <h1><i class="fa fa-gear"></i> Settings</h1>
+          <h1><i class="fa fa-user"></i>Profile</h1>
         </div>
       </div>
     </div>
@@ -89,61 +89,61 @@
           <a href="index.html" class="btn btn-secondary btn-block"><i class="fa fa-arrow-left"></i> Back To Dashboard</a>
         </div>
         <div class="col-md-3">
-          <a href="index.html" class="btn btn-success btn-block"><i class="fa fa-check"></i> Save Changes</a>
+          <a href="index.html" class="btn btn-success btn-block" data-toggle="modal" data-target="#passwordModal"><i class="fa fa-lock"></i> Change Password</a>
+        </div>
+        <div class="col-md-3">
+          <a href="index.html" class="btn btn-danger btn-block"><i class="fa fa-remove"></i> Delete Account</a>
         </div>
       </div>
     </div>
   </section>
-  
+
   <!-- End Action Buttons -->
 
-  <!-- Start Settings -->
+  <!-- Start Profile Edit -->
 
-  <section id="settings">
+  <section id="edit-post">
     <div class="container">
       <div class="row">
-        <div class="col">
+        <div class="col-md-9">
           <div class="card">
             <div class="card-header">
-              <h4>Edit Settings</h4>
+              <h4>Edit Profile</h4>
             </div>
             <div class="card-block">
               <form>
-                <fieldset class="form-group">
-                  <legend>Allow User Registration</legend>
-                  <div class="form-check">
-                    <label class="form-check-label">
-                      <input type="radio" class="form-check-input" value="yes" checked> Yes
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <label class="form-check-label">
-                      <input type="radio" class="form-check-input" value="no"> No
-                    </label>
-                  </div>
-                </fieldset>
-                <fieldset class="form-group">
-                  <legend>Home Page Format</legend>
-                  <div class="form-check">
-                    <label class="form-check-label">
-                      <input type="radio" class="form-check-input" value="post-index" checked> Post Index
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <label class="form-check-label">
-                      <input type="radio" class="form-check-input" value="single-page"> Single Page
-                    </label>
-                  </div>
-                </fieldset>
+                <div class="form-group">
+                  <label for="title" class="form-control-label">Name</label>
+                  <input type="text" class="form-control" value="Mark Traversy">
+                </div>
+                <div class="form-group">
+                  <label for="email" class="form-control-label">Email</label>
+                  <input type="text" class="form-control" value="mark@test.com">
+                </div>
+                <div class="form-group">
+                  <label for="body">Bio</label>
+                  <textarea name="editor1" class="form-control">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+                </div>
               </form>
             </div>
           </div>
         </div>
+        <div class="col-md-3">
+          <h3>Your Avatar</h3>
+          <img src="img/default-avatar.png" class="d-block img-fluid mb-3">
+          <button class="btn btn-primary btn-block">Edit Image</button>
+          <button class="btn btn-danger btn-block">Delete Image</button>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- End Settings-->
+  <!-- End Profile Edit-->
 
   <!-- Start Footer -->
 
@@ -158,6 +158,43 @@
   </footer>
 
   <!-- End Footer -->
+
+  <!-- Change Password Modal -->
+
+  <div class="modal fade" id="passwordModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+
+        <div class="modal-header bg-warning text-white">
+          <h5 class="modal-title" id="passwordModalLabel">Edit Password</h5>
+          <button class="close" data-dismiss="modal">
+            <span>&times;</span> 
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="password" class="form-control-label">Password</label>
+              <input type="password" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="password2" class="form-control-label">Confirm Password</label>
+              <input type="password" class="form-control">
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button class="btn btn-warning" data-dismiss="modal">Edit Password</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Change Password Modal -->
 
   <script src="js/jquery.min.js"></script>
   <script src="js/tether.min.js"></script>
