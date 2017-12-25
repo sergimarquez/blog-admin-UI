@@ -1,0 +1,13 @@
+/*-----------------------------------------------------------------------------------*/
+/*  Bootstrap Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 767px) {
+	/*Fixes overlap in navbar between brand and button*/
+    .container {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
